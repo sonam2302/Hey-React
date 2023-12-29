@@ -1,0 +1,27 @@
+{
+  "name": "hey-react",
+  "version": "1.0.0",
+  "description": "learn React from Sonam Chaudhary",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonam2302/Hey-React.git"
+  },
+  "author": "Sonam Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonam2302/Hey-React/issues"
+  },
+  "homepage": "https://github.com/sonam2302/Hey-React#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
