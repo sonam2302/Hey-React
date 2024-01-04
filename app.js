@@ -7,66 +7,26 @@ const heading = React.createElement("h1", {
     xy: "abc"
 }, "Hello World From React :) ");
 console.log(heading);
-// React element is an javascript object , not an h1 tag ,returns an object 
-// {$$typeof: Symbol(react.element), type: 'h1', key: null, ref: null, props: {…}, …}
-// $$typeof: Symbol(react.element)
-// key: null
-// props: children: "Hello World From React :) " 
-// id: "heading"
-// xy:"abc"
-// [[Prototype]]: Object
 
+//jsx - is not HTML in js , its HTML/XML like syntax 
+// when this piece of code is executed , babel (which is a transpiler which comes with parcel) transpiles the 
+// jsx to code that browser will understand 
 
-
-// problem 1- create siblings: -
-//     <div id="parent">
-//         <div id="child">
-//             <h1>I'm h1 tag</h1>
-//             <h2>I'm h2 tag</h2>
-//         </div>
-//     </div>
-// sol - to make siblings in 3rd arg u have to pass 2 children in an array
-
-// const parent = React.createElement("div",{id:"parent"},
-// React.createElement("div",{id:"child"},[
-//     React.createElement("h1",{},"I'm an h1 tag"),
-//     React.createElement("h2",{},"I'm an h2 tag"),
-
-// ]
-// )
-// );
-
-
-// problem2 - create complex structire with siblings 
-{/* <div id="parent">
-    <div id="child">
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-    <div id="child2">
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-</div> */}
-
-const parent = React.createElement("div",{id:"parent"},
-    React.createElement("div",{id:"child"},
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm h2 tag")
-    
-    ),
-    React.createElement("div",{id:"child2"},
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm h2 tag")
-    
-    )
-
-);
+const jsxHeading = <h1 id= "heading" xy="abc">Hey React using JSX</h1>
+console.log(jsxHeading); // same o/p as heading 
+//babel is converting jsx code to react element which is a javascript object , render convert into html 
+//BABEL is some js code which also coverts ES6 Code to the code which browser understands
+//JSX => REACT CREATE ELEMENT => REACT ELEMENT- JS OBJECT => HTML ELEMENT
+//JSX => Attribute should be in camelcase unlike html- all are in lower case  
+//JSX => multiple lines - wrap with paranthesis ()
+const jsxMultiLine = (
+    <h1 className ="head" tabIndex="5">Hey JSX</h1>
+)
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
-root.render(parent);
-console.log(parent,'parent');
+root.render(jsxMultiLine); 
+
 
 // this render method converting this object to h1 tag and placing it in root node 
