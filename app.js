@@ -38,12 +38,17 @@ const Header = () => {
     )
 }
 
+
 //restaurant Card Component
 
 const RestaurantCard = () => {
     return (
-        <div className="res-card">
-            <h1>KFC Foods</h1>
+        <div className="res-card"> 
+            <img  className="res-card-logo" alt="res-logo" src ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7"/>
+            <h3>Pizza Hut</h3>
+            <h4>Pizzas, Italian, Pasta, Desserts</h4>
+            <h4>4.4 stars</h4>
+            <h4> 20 minutes</h4>
         </div>
     )
 }
@@ -57,7 +62,22 @@ const Body = () => {
                 <input type="search" placeholder="Search here "/>
             </div>
             <div className="res-container">
-                <RestaruntCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+                <RestaurantCard/>
+
             </div>
 
         </div>
@@ -68,6 +88,7 @@ const AppLayout = () => {
     return (
         <div className="app">
             <Header/>
+            <Body/>
         </div>
     )
 };
