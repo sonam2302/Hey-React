@@ -1,11 +1,12 @@
 import React from "react";
 
+import {imgBaseURL} from "../utils/constant";
 const styleCard = {
   backgroundColor: "red",
 };
 
-const imgBaseUrl =
-  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+// const imgBaseUrl =
+//   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const RestaurantCard = (props) => {
   const { resData } = props;
   const {
@@ -22,7 +23,7 @@ const RestaurantCard = (props) => {
       <img
         className="res-card-logo"
         alt="res-logo"
-        src={imgBaseUrl + cloudinaryImageId}
+        src={imgBaseURL + cloudinaryImageId}
       />
       <h3> {name}</h3>
       <h4>

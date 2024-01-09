@@ -1,5 +1,5 @@
 import React from "react";
-
+import {LOGO_URL} from '../utils/constant';
 const Header = () => {
   return (
     <div className="header">
@@ -7,7 +7,7 @@ const Header = () => {
         <img
           className="logo"
           alt="Sonam's Kitchen"
-          src="https://stock.adobe.com/in/search?k=restaurant+logo&asset_id=469998410"
+          src={LOGO_URL}
         />
       </div>
       <div className="nav-items">
