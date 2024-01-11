@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 const Body = () => {
     //State variable 
-    const [listOfRestaurants] = useState([
+    const [listOfRestaurants, setListOfRestaurants] = useState([
       {
         info: {
           id: "39243",
@@ -111,10 +111,11 @@ const Body = () => {
             <button onClick = 
             { 
                 () => {
-                   listOfRestaurants = listOfRestaurants.filter(
+                   const filteredRestaurants = listOfRestaurants.filter(
                     (resta) => resta.info.avgRating >4
                    );
-                   console.log(listOfRestaurants,'listoffilteredrestauramt');
+                  //  console.log(listOfRestaurants,'listoffilteredrestauramt');
+                  setListOfRestaurants(filteredRestaurants);
                 }
             } 
             className="filter-btn">Top Rated Restaurant</button>
