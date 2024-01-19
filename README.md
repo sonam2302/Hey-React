@@ -1,5 +1,22 @@
 #Hey React
 
+
+#Parcel
+- Dev Build
+- Local Server
+- File Watching Algorith - written in c++
+- Caching- Faster Builds
+- Image Optimization 
+- Minification
+- Bundling
+- Different Bundling - support older browsers
+- Diagnostic
+- Error Handling - HTTPS
+- Compress
+- Tree Shaking  - remove ununsed code 
+- Different Dev and Prod Bundles
+- Consistent Hashing
+- Code Splitting
 // //planning
 // =>Header
 //   > logo

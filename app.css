@@ -29,8 +29,8 @@
 
 .res-card {
     margin:5px;
-    width: 200px;
-    height:430px;
+    width: 250px;
+    /* height:430px; */
     padding: 5px;  
     background-color: grey; 
 }

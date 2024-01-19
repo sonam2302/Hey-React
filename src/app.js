@@ -5,6 +5,8 @@ import Body from "./components/Body";
 
 // lets make top level component where we will place all compo
 const AppLayout = () => {
+  console.log(<Body/>,'body virtual dom');
+  console.log(<Header/>,'header virtual dom');
   return (
     <div className="app">
       <Header />
