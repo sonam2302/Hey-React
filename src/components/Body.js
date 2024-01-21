@@ -75,6 +75,21 @@ const Body = () => {
             } 
             className="filter-btn">Top Rated Restaurant</button>
         </div>
+        <div className="sort">
+          <button onClick = {
+            () => {
+              const sortedRestaurant = listOfRestaurants.sort((a,b) => 
+               {
+ b.info.avgRating - a.info.avgRating
+              });
+              console.log(sortedRestaurant,'sorted')
+
+              setListOfRestaurants(sortedRestaurant);
+
+            }
+
+          }>top rating sort</button>
+        </div>
   
         <div className="res-container">
         {console.log(listOfRestaurants,'list')}
