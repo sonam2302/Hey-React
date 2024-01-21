@@ -69,7 +69,8 @@ const Body = () => {
                    const filteredRestaurants = listOfRestaurants.filter(
                     (resta) => resta.info.avgRating >4
                    );
-                  //  console.log(listOfRestaurants,'listoffilteredrestauramt');
+                   console.log(listOfRestaurants,'listoffilteredrestauramt');//filter doesn't change the original array so it will be 20 only with 3.9 rating as well
+                   console.log(filteredRestaurants,'filteredRestaurants');//filter updated the new array which is filtered restaurant so it will be 18 , exclufing 3.9 rating s
                   setListOfRestaurants(filteredRestaurants);
                 }
             } 
@@ -78,10 +79,10 @@ const Body = () => {
         <div className="sort">
           <button onClick = {
             () => {
-              const sortedRestaurant = listOfRestaurants.sort((a,b) => 
-               {
- b.info.avgRating - a.info.avgRating
-              });
+              const sortedRestaurant = [...listOfRestaurants].sort((a,b) => 
+  b.info.avgRating - a.info.avgRating
+              );
+              console.log(listOfRestaurants,'Array.prototype.sort sorts array in place i.e. it mutates the original obj. reference doesnt chnage and mutation doesnt get noticed')
               console.log(sortedRestaurant,'sorted')
 
               setListOfRestaurants(sortedRestaurant);
