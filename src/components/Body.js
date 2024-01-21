@@ -80,7 +80,9 @@ const Body = () => {
           <button onClick = {
             () => {
               const sortedRestaurant = [...listOfRestaurants].sort((a,b) => 
-  b.info.avgRating - a.info.avgRating
+              {
+return   b.info.avgRating - a.info.avgRating // if you are using curly brace u need to write return , otherwise it wont work
+              }
               );
               console.log(listOfRestaurants,'Array.prototype.sort sorts array in place i.e. it mutates the original obj. reference doesnt chnage and mutation doesnt get noticed')
               console.log(sortedRestaurant,'sorted')
