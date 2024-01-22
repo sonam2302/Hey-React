@@ -1,13 +1,19 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
 import {restaurants} from '../utils/mockdata';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 
 const Body = () => {
   console.log(<RestaurantCard/>, 'RestaurantCard virtual dom');
     //State variable 
     const [listOfRestaurants, setListOfRestaurants] = useState(restaurants);
+//3rd - useeffect called after body renedered
+    useEffect(() => {
+console.log("useEffect called")
+    },[]);
+
+    console.log("bodycalled") //1st this will call
     //plainjs variable 
     // let listOfRestaurantsJS = [
     //     {
@@ -56,6 +62,7 @@ const Body = () => {
     //         },
     //       },
     // ]
+    //then this jsx will rendered -2nd
     return (
       <div className="body">
         <div className="search">
