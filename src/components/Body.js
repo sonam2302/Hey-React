@@ -24,11 +24,14 @@ const Body = () => {
       );
     const info = await data.json();
      console.log(info, "jsonInfo",info.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-     setListOfRestaurants(info.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+     //optional chaining in js
+     setListOfRestaurants(info?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
  
-  
-  console.log("bodycalled"); //1st this will call
+  if(listOfRestaurants.length === 0) {
+    return <h1>Loading........</h1>
+  }
+  // console.log("bodycalled"); //1st this will call
   //plainjs variable
   // let listOfRestaurantsJS = [
   //     {
