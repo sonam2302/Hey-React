@@ -1,7 +1,9 @@
 import React from "react";
 import {LOGO_URL} from '../utils/constant';
+import { useState } from "react";
 const Header = () => {
-  let btnName = "Login";
+
+  const [btnNameReact, setBtnName] = useState("lOGIN")
   return (
     <div className="header">
       <div className="logo-container">
@@ -19,10 +21,10 @@ const Header = () => {
           <li>Cart</li>
           <button className="login" onClick={
             () => {
-              btnName="Logout";
-              console.log(btnName); //its changing to logout but its not showing in the UI , Bcz , it wont rerender the comp , thats y we use state varaiable instead of local js variable
+              setBtnName("LOGOUT");
+              console.log(btnNameReact); 
               }}
-              >{btnName}</button>
+              >{btnNameReact}</button>
         </ul>
       </div>
     </div>
