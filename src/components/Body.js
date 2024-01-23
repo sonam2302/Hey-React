@@ -1,11 +1,13 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ShimmerCard from "./ShimmerCard";
 const Body = () => {
   console.log(<RestaurantCard />, "RestaurantCard virtual dom");
   //State variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [inputVal, setInputVal] = useState("");
+  const inputRef = useRef();
   //3rd - useeffect called after body renedered
   useEffect(() => {
     fetchData();
@@ -83,8 +85,12 @@ const Body = () => {
   //then this jsx will rendered -2nd
   return listOfRestaurants.length === 0? <ShimmerCard/>: (
     <div className="body">
-      <div className="search">
-        <input type="search" placeholder="Search here " />
+      <div className="inputAdd">
+        <input type="text" placeholder="Search here " ref={inputRef} />
+        <button onClick={() => {
+setInputVal(inputRef.current.value)
+        }}> Add</button>
+        <h1>{inputVal}</h1>
       </div>
 
       <div className="filter">
