@@ -27,10 +27,10 @@ const Body = () => {
      //optional chaining in js
      setListOfRestaurants(info?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
- 
-  if(listOfRestaurants.length === 0) {
-    return <ShimmerCard/>
-  }
+ //consitional rendering 
+  // if(listOfRestaurants.length === 0) {
+  //   return <ShimmerCard/>
+  // }
   // console.log("bodycalled"); //1st this will call
   //plainjs variable
   // let listOfRestaurantsJS = [
@@ -81,7 +81,7 @@ const Body = () => {
   //       },
   // ]
   //then this jsx will rendered -2nd
-  return (
+  return listOfRestaurants.length === 0? <ShimmerCard/>: (
     <div className="body">
       <div className="search">
         <input type="search" placeholder="Search here " />
