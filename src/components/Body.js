@@ -1,12 +1,11 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
-import { restaurants } from "../utils/mockdata";
 import { useState, useEffect } from "react";
 
 const Body = () => {
   console.log(<RestaurantCard />, "RestaurantCard virtual dom");
   //State variable
-  const [listOfRestaurants, setListOfRestaurants] = useState(restaurants);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   //3rd - useeffect called after body renedered
   useEffect(() => {
     fetchData();
@@ -24,7 +23,7 @@ const Body = () => {
     // method:'GET'}
       );
     const info = await data.json();
-     console.log(info, "jsonInfo");
+     console.log(info, "jsonInfo",info.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
      setListOfRestaurants(info.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
   };
  
