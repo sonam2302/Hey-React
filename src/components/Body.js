@@ -1,7 +1,7 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
-
+import ShimmerCard from "./ShimmerCard";
 const Body = () => {
   console.log(<RestaurantCard />, "RestaurantCard virtual dom");
   //State variable
@@ -29,7 +29,7 @@ const Body = () => {
   };
  
   if(listOfRestaurants.length === 0) {
-    return <h1>Loading........</h1>
+    return <ShimmerCard/>
   }
   // console.log("bodycalled"); //1st this will call
   //plainjs variable
